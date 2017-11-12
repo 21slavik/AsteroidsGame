@@ -1,5 +1,7 @@
 Spaceship bob = new Spaceship();
 Star[] nightSky = new Star[500];
+ArrayList <Asteroid> theList;
+int numAsteroids = 55;
 boolean spaceIsPressed = false;
 boolean upIsPressed = false;
 boolean downIsPressed = false;
@@ -13,6 +15,12 @@ public void setup()
   {
     nightSky[i] = new Star();
   }
+  theList = new ArrayList <Asteroid>();
+  for(int i=0; i<55; i++)
+  {
+    theList.add(i,new Asteroid());
+  }
+
 }
 public void draw() 
 {
@@ -23,7 +31,12 @@ public void draw()
 
   bob.move();
   bob.show();
-}
+  for (int nI = 0; nI < theList.size(); nI++)
+  {
+    theList.get(nI).move();
+    theList.get(nI).show();
+  }
+  }
 
 public void keyPressed()
 {
@@ -49,27 +62,27 @@ public void keyPressed()
   }
   if (leftIsPressed == true)
   {
-    katie.rotate(-15);
+    bob.rotate(-15);
   }
   if (rightIsPressed == true)
   {
-    katie.rotate(15);
+    bob.rotate(15);
   }
   if (upIsPressed == true)
   {
-    katie.accelerate(0.5);
+    bob.accelerate(0.5);
   }
   if (downIsPressed == true)
   {
-    katie.accelerate(-0.5);
+    bob.accelerate(-0.5);
   }
   if (key == 'h')
   {
-    katie.setDirectionX(0);
-    katie.setDirectionY(0);
-    katie.setX((int)(Math.random()*1000));
-    katie.setY((int)(Math.random()*650));
-    katie.setPointDirection((int)(Math.random()*360));
+    bob.setDirectionX(0);
+    bob.setDirectionY(0);
+    bob.setX((int)(Math.random()*1000));
+    bob.setY((int)(Math.random()*650));
+    bob.setPointDirection((int)(Math.random()*360));
     fill(255);
     rect(-5, -5, 1205, 805);
   }
@@ -93,3 +106,4 @@ public void keyReleased()
   {
     downIsPressed = false;
   }
+}  
