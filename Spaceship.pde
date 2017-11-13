@@ -30,7 +30,8 @@ class SpaceShip extends Floater
   public double getPointDirection() {return myPointDirection;}
   public void show()
   {
-    fill(myColor);   
+    fill(myColor);
+    background(0);   
     stroke(255);           
     double dRadians = myPointDirection*(Math.PI/180);                 
     int xRotatedTranslated, yRotatedTranslated;    

@@ -1,4 +1,4 @@
-Spaceship bob = new Spaceship();
+SpaceShip bob = new SpaceShip();
 Star[] nightSky = new Star[500];
 ArrayList <Asteroid> theList;
 int numAsteroids = 55;
