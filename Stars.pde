@@ -5,7 +5,7 @@ class Star
   public Star()
   {
     starX = (int)(Math.random()*1000);
-    starY = (int)(Math.random()*1000);
+    starY = (int)(Math.random()*650);
     starSize = (Math.random()+1);
   }
   public void show()

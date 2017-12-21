@@ -13,7 +13,7 @@ class SpaceShip extends Floater
     yCorners[2] = 8;
     myColor = color((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
     myCenterX = 500;
-    myCenterY = 500;
+    myCenterY = 325;
     myDirectionX = 0;
     myDirectionY = 0;
     myPointDirection = 0;
@@ -30,8 +30,7 @@ class SpaceShip extends Floater
   public double getPointDirection() {return myPointDirection;}
   public void show()
   {
-    fill(myColor);
-    background(0);   
+    fill(myColor);   
     stroke(255);           
     double dRadians = myPointDirection*(Math.PI/180);                 
     int xRotatedTranslated, yRotatedTranslated;    
